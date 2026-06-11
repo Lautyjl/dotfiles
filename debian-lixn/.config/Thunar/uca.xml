@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
 <action>
-	<icon>utilities-terminal</icon>
-	<name>Open Terminal Here</name>
+	<icon>geany</icon>
+	<name>Abrir con Geany</name>
 	<submenu></submenu>
-	<unique-id>1781009491533344-1</unique-id>
-	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
-	<description>Example for a custom action</description>
-	<range></range>
+	<unique-id>1781187956820933-1</unique-id>
+	<command>geany %F</command>
+	<description>Abre el archivo en el editor Geany</description>
+	<range>*</range>
 	<patterns>*</patterns>
-	<startup-notify/>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>tilix</icon>
+	<name>Abrir Tilix aquí</name>
+	<submenu></submenu>
+	<unique-id>1781188113412111-2</unique-id>
+	<command>tilix --working-directory=%f</command>
+	<description>Abre la terminal en esta carpeta</description>
+	<range>*</range>
+	<patterns>*</patterns>
 	<directories/>
 </action>
 </actions>

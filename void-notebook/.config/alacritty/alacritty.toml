@@ -1,0 +1,25 @@
+[window]
+# Opacidad del fondo (1.0 es sólido, 0.9 es un poco transparente)
+opacity = 0.70
+
+# Espacio entre el borde de la ventana y las letras
+padding = { x = 10, y = 10 }
+
+# Titulo de la ventana
+title = "Alacritty"
+
+[font]
+# Tamaño de la letra
+size = 11.0
+
+# Tipografía por defecto
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+[colors.primary]
+background = "#2b004d" # Fondo violeta oscuro
+foreground = "#d4d4d4" # Letras claras
+
+[cursor]
+style = { shape = "Beam", blinking = "On" } # Cursor como rayita que parpadea

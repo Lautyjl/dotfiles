@@ -112,18 +112,17 @@ source $ZSH/oh-my-zsh.sh
 
 # --- CONFIGURACIÓN PERSONAL DE LIXN ---
 
-# Aliases en español (compatibles con dnf5 de Fedora 43)
-alias actualizar='sudo dnf upgrade --refresh'
+# Aliases en español (compatibles con dnf5 de Fedora 44)
+alias actualizar='sudo dnf upgrade && flatpak update -y'
+alias limpiar='sudo dnf autoremove -y && flatpak uninstall --unused -y && sudo dnf clean all'
 alias instalar='sudo dnf install'
 alias borrar='sudo dnf remove'
 alias buscar='dnf search'
 alias facha='fastfetch --logo-type kitty --logo ~/Imágenes/burger_final.png --logo-width 35'
 alias revivir='killall plasmashell && kstart plasmashell'
-alias discord='flatpak run com.discordapp.Discord'
 alias apagar='sudo poweroff'
 alias bt-fix='sudo systemctl restart bluetooth'
 alias audio-fix='systemctl --user restart wireplumber'
-alias editor='flatpak run org.kde.kdenlive'
 alias zshconfig='nano ~/.zshrc'
 
 # Atajos para tus apps de Flatpak
@@ -133,4 +132,3 @@ alias notas='flatpak run md.obsidian.Obsidian'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 facha
-export GEMINI_API_KEY="AIzaSyDk21y2agBGu6MjkXd9DSjxUFA0Vgq_ffY"

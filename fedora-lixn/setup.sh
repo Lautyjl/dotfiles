@@ -17,6 +17,10 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 sudo flatpak remote-delete fedora 2>/dev/null || true
 sudo rm -f /etc/flatpak/remotes.d/fedora*.flatpakrepo
 
+# Instalar Yazi file manager
+sudo dnf copr enable -y varlad/yazi
+sudo dnf install -y yazi ffmpegthumbnailer 7zip jq poppler-utils fd-find ripgrep
+
 # 4. Copiar dotfiles al Home del usuario
 cp -f .zshrc ~/
 cp -f .p10k.zsh ~/ 2>/dev/null || true

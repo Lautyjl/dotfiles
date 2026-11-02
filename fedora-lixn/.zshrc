@@ -132,3 +132,10 @@ alias notas='flatpak run md.obsidian.Obsidian'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 facha
+
+# Autocompletado nativo y menú interactivo con Tab
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
